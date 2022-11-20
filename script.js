@@ -13,11 +13,6 @@ var data = await response.json();
 }
 
 getapi(api_url);
-let but1 =document.getElementById("but1");
-let but2 =document.getElementById("but2");
-let but3 =document.getElementById("but3");
-let but4 =document.getElementById("but4");
-let but5 =document.getElementById("but5");
 
 function show(data) {
     let tab = `<div class="">Select a color</div>
@@ -29,9 +24,6 @@ function show(data) {
         <button class="button button5" id="but5">${data.data[4].name}</button>
     </div>  
     `;
-    but1.addEventListener('onclick',function(ev){
-        console.log(ev);
-    })
         // for (let r of data.data){
         // //     tab+=`<div class="">Select a color</div>
         // //     <div class="colors">
@@ -54,3 +46,18 @@ function show(data) {
 
     document.getElementById("colorChoices").innerHTML = tab;
 }
+
+let but1 =document.getElementById("but1");
+let but2 =document.getElementById("but2");
+let but3 =document.getElementById("but3");
+let but4 =document.getElementById("but4");
+let but5 =document.getElementById("but5");
+let but = document.getElementsByClassName(".button");
+for(let b of but){
+    b.addEventListener('onclick',function(ev){
+        console.log(ev);
+    })
+}
+// but.addEventListener('onclick',function(ev){
+//     console.log(ev);
+// })
